@@ -12,7 +12,7 @@
   angular.module('jQuery', []).factory('jQuery', function(){
     return window.jQuery;
   });
-  angular.module('JEFRi', ['jQuery']);
+  angular.module('jefri', ['jQuery']);
   angular.module('jefri').factory('JEFRi', function(){
     var rt, ref$;
     rt = new JEFRi.Runtime("context.json");
@@ -179,5 +179,5 @@
       }
     };
   };
-  angular.module('JEFRi').directive('inline', ['jQuery', 'JEFRi', Inline]);
+  angular.module('jefri').directive('inline', ['jQuery', 'JEFRi', Inline]);
 }).call(this);

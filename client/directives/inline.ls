@@ -44,5 +44,5 @@ Inline = ($, JEFRi) ->
 				entity[attrs.property] could[0]
 				scope.value = entity[attrs.property]![attrs.display]!
 
-angular.module \JEFRi
+angular.module \jefri
 	.directive \inline, [\jQuery, \JEFRi, Inline]
