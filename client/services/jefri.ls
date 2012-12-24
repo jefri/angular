@@ -1,4 +1,4 @@
-angular.module \jefri,
+angular.module \JEFRi,
 	.factory \JEFRi, ->
 		rt = new JEFRi.Runtime "context.json"
 		JEFRi.Runtime:: <<<

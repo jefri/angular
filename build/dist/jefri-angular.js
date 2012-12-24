@@ -12,8 +12,8 @@
   angular.module('jQuery', []).factory('jQuery', function(){
     return window.jQuery;
   });
-  angular.module('jefri', ['jQuery']);
-  angular.module('jefri').factory('JEFRi', function(){
+  angular.module('JEFRi', ['jQuery']);
+  angular.module('JEFRi').factory('JEFRi', function(){
     var rt, ref$;
     rt = new JEFRi.Runtime("context.json");
     ref$ = JEFRi.Runtime.prototype;
@@ -179,5 +179,5 @@
       }
     };
   };
-  angular.module('jefri').directive('inline', ['jQuery', 'JEFRi', Inline]);
+  angular.module('JEFRi').directive('inline', ['jQuery', 'JEFRi', Inline]);
 }).call(this);
