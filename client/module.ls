@@ -4,4 +4,4 @@ angular.module \jQuery, []
 	.factory \jQuery, ->
 		window.jQuery
 
-anguler.module \JEFRi, <[ jQuery ]>
+angular.module \JEFRi, <[ jQuery ]>
