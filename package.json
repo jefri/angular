@@ -1,0 +1,39 @@
+{
+  "name": "jefri-angular",
+  "title": "JEFRi AngularJS",
+  "homepage": "http://www.jefri.org",
+  "version": "1.0.0",
+  "author": {
+    "name": "David Souther",
+    "email": "<davidsouther@gmail.com>"
+  },
+  "description": "A suite of directives and services to ease JEFRi development on Angular.",
+  "contributors": [
+    {
+      "name": "Jonathan Porta",
+      "email": "jonathan@jonathanporta.com"
+    }
+  ],
+  "files": [
+    "lib/", "package.json"
+  ],
+  "main": "./lib/jefri",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DavidSouther/JEFRi.git"
+  },
+  "keywords": [
+    "ef",
+    "entity",
+    "entity framework"
+  ],
+  "dependencies": {
+    "superscore": ">=0.3.0"
+  },
+  "devDependencies": {
+    "grunt": "0.3.x",
+    "grunt-contrib": "0.2.x",
+    "grunt-livescript": "0.4.x"
+  },
+  "licenses": [{"type": "MIT"}]
+}
