@@ -1,6 +1,6 @@
 {
   "name": "jefri-angular",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": ["./build/dist/jefri-angular.min.js"],
   "dependencies": {
   	"jefri": "~1.0.0",

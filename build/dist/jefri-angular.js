@@ -12,7 +12,7 @@
   angular.module('jQuery', []).factory('jQuery', function(){
     return window.jQuery;
   });
-  anguler.module('JEFRi', ['jQuery']);
+  angular.module('JEFRi', ['jQuery']);
   angular.module('jefri').factory('JEFRi', function(){
     var rt, ref$;
     rt = new JEFRi.Runtime("context.json");
