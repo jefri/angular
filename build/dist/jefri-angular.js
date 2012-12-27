@@ -1,5 +1,5 @@
 (function(){
-  var JefriProperty, Inline, prepareHandler$ = function (o){
+  var JefriProperty, controller, Inline, prepareHandler$ = function (o){
         o.__event_handler = o.__event_handler || [];
         o.__event_advisor = o.__event_advisor || [];
       }, observe$ = function (callback){
@@ -129,21 +129,23 @@
     };
   };
   angular.module('JEFRi').directive('jefriProperty', ['jQuery', JefriProperty]);
+  controller = function($scope){
+    $scope.editing = false;
+    $scope.edit = function(){
+      $scope.editing = true;
+    };
+    $scope.save = function(){
+      $scope.editing = false;
+    };
+  };
+  controller.$inject = ['$scope'];
   Inline = function($, JEFRi){
     return {
       restrict: 'E',
       template: '<span><span ng:hide="editing" ng:click="edit()">{{value}}</span><span ng:show="editing && property"><input type="text" name="value" ng:required ng-model="value" ui-event="{blur:\'save()\'}" /></span><span ng:show="editing && relationship"><select class="relationship" ng:model="to_id" ui-event="{blur:\'save()\'}"><option disabled>{{prompt}}:</option><option ng:repeat="entity in options" value="{{ entity.id }}">{{ entity.name }}</option></select></span></span>',
       replace: true,
       scope: true,
-      controller: function($scope){
-        $scope.editing = false;
-        $scope.edit = function(){
-          $scope.editing = true;
-        };
-        $scope.save = function(){
-          $scope.editing = false;
-        };
-      },
+      controller: controller,
       link: function(scope, element, attrs){
         var entity, def;
         entity = scope[attrs.entity || 'entity'];

@@ -1,3 +1,11 @@
+controller = !($scope)->
+	$scope.editing = no
+	$scope.edit = !->
+		$scope.editing = yes
+	$scope.save = !->
+		$scope.editing = no
+controller.$inject = <[ $scope ]>
+
 Inline = ($, JEFRi) ->
 	restrict: \E
 	template: '<span>
@@ -17,12 +25,7 @@ Inline = ($, JEFRi) ->
 			</span>'
 	replace: true
 	scope: true
-	controller: !($scope)->
-		$scope.editing = no
-		$scope.edit = !->
-			$scope.editing = yes
-		$scope.save = !->
-			$scope.editing = no
+	controller: controller
 	link: !(scope, element, attrs) ->
 		entity = scope[attrs.entity || 'entity']
 		def = entity._definition!
